@@ -1,0 +1,10 @@
+.text{
+    color: rgb(99, 168, 168);
+}
+.btn{
+    background-color: rgb(99, 168, 168);
+    font-weight: 700;
+}
+.btn:hover{
+    background-color: teal;
+}

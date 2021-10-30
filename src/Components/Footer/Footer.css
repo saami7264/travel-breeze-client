@@ -1,0 +1,20 @@
+.footer-section{
+    width: 100%;
+    background-color: rgb(99, 168, 168);
+}
+.fab{
+    margin: 10px 40px;
+    color: whitesmoke;
+}
+.fab:hover{
+    color: #49d395;
+}
+.btn{
+    background-color: rgb(99, 168, 168);
+    border: 2px solid;
+    margin-top: 10px;
+}
+.input-field{
+    border: 2px solid;
+    margin: 2px;
+}
