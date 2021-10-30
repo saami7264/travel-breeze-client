@@ -10,7 +10,7 @@ const Home = () => {
     const [packages, setPackages] = useState([]);
 
     useEffect(() => {
-        fetch('https://frozen-reef-63727.herokuapp.com//packages')
+        fetch('https://frozen-reef-63727.herokuapp.com/packages')
             .then(res => res.json())
             .then(data => setPackages(data))
     }, [])
