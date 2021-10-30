@@ -10,7 +10,7 @@ const PackageDetails = () => {
     const [pack, setPack] = useState()
 
     useEffect(() => {
-        fetch(`http://localhost:9000/packages/${packageId}`)
+        fetch(`https://frozen-reef-63727.herokuapp.com/packages/${packageId}`)
             .then(res => res.json())
             .then(data => setPack(data))
     }, [])
