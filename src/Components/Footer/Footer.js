@@ -9,7 +9,6 @@ const Footer = () => {
                 <i class="fab fa-twitter fa-5x"></i>
                 <i class="fab fa-instagram fa-5x"></i>
                 <i class="fab fa-youtube fa-5x"></i>
-                <i class="fab fa-snapchat fa-5x"></i>
             </div>
             <div className='col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3'>
                 <h3 className='text-white'>Subscribe To Newsletter</h3>

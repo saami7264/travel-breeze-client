@@ -2,9 +2,9 @@
     color: rgb(99, 168, 168);
 }
 .btn{
-    background-color: rgb(99, 168, 168);
+    background-color: #D4F7E6;
     font-weight: 700;
 }
 .btn:hover{
-    background-color: teal;
+    background-color: #5AE4A7;
 }

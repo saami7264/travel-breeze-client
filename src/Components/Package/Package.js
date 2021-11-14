@@ -6,7 +6,6 @@ const Package = ({ pkg }) => {
 
     const { _id, name, price, details, img } = pkg;
 
-    const url = ``
 
     return (
         <div className="my-5 p-5 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4 g-5">

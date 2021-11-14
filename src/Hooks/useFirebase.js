@@ -8,17 +8,19 @@ initializeFirebase();
 const useFirebase = () => {
 
     const [user, setUser] = useState()
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
     const auth = getAuth();
 
 
-    const signInUsingGoogle = () => {
+    const signInUsingGoogle = (location, history) => {
         setIsLoading(true);
         const googleProvider = new GoogleAuthProvider();
 
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 setUser(result.user)
+                const destination = location?.state?.from || '/';
+                history.replace(destination)
             })
             .finally(() => setIsLoading(false))
     }
@@ -42,7 +44,7 @@ const useFirebase = () => {
             }
             setIsLoading(false)
         })
-    }, [])
+    }, [auth])
 
     return {
         user,

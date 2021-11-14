@@ -5,6 +5,7 @@ import useAuth from '../../Hooks/useAuth';
 import img1 from '../../images/bali.jpg'
 import img2 from '../../images/maldives.jpg'
 import img3 from '../../images/swizerland.jpg'
+import logo from '../../images/travel.png'
 
 const Header = () => {
     const { user, logOut } = useAuth()
@@ -13,14 +14,24 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
-                    <Navbar.Brand className='text-primary font-weight-bold' to="/home">Travel Breeze</Navbar.Brand>
+                    <Navbar.Brand to="/home">
+                        <Link to="/home">
+                            <img src={logo} style={{ height: '70px', width: '120px' }} alt="" />
+                        </Link>
+                    </Navbar.Brand>
                     <Navbar.Collapse className="justify-content-start">
 
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/orders">My Orders</Nav.Link>
                             {
-                                user?.email ? <button onClick={logOut} className='me-5 border-3 rounded-3 btn-info'>Log Out</button> :
+                                user?.email ?
+                                    <>
+                                        <Nav.Link as={Link} to="/myOrders">My Orders</Nav.Link>
+                                        <Nav.Link as={Link} to="/allOrders">Manage All Orders</Nav.Link>
+                                        <Nav.Link as={Link} to="/addService">Add A New Package</Nav.Link>
+                                        <button onClick={logOut} style={{ backgroundColor: '#5AE4A7' }} className='me-5 border-3 rounded-3'>Log Out</button>
+                                    </>
+                                    :
 
                                     <div>
                                         <Nav.Link className='d-inline-block' as={Link} to="/login">Login</Nav.Link>
@@ -39,7 +50,7 @@ const Header = () => {
             <div>
                 <Carousel>
                     <Carousel.Item>
-                        <img height='1000px'
+                        <img height='600px'
                             className="d-block w-100"
                             src={img1}
                             alt="First slide"
@@ -50,7 +61,7 @@ const Header = () => {
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img height='1000px'
+                        <img height='600px'
                             className="d-block w-100"
                             src={img2}
                             alt="Second slide"
@@ -62,7 +73,7 @@ const Header = () => {
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img height='1000px'
+                        <img height='600px'
                             className="d-block w-100"
                             src={img3}
                             alt="Third slide"
